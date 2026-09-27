@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lennotech Agency Surveys</title>
     <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
+</head><body><header>
     <h1>Lennotech Agency</h1>
     <p>Survey Rewards</p>
-</header>
-
-<main>
+</header><main><!-- HOME SECTION -->
+<section id="home">
     <section class="hero">
         <h2>Earn by Sharing Your Opinion</h2>
         <p>Complete available surveys and earn rewards.</p>
@@ -38,25 +32,183 @@
             <p>Request eligible withdrawals through M-Pesa.</p>
         </div>
     </section>
+</section>
 
-    <section id="login" class="login-box" style="display:none;">
-        <h2>Welcome to Lennotech</h2>
 
-        <input type="text" id="name" placeholder="Your name">
+<!-- REGISTRATION -->
+<section id="login" class="login-box" style="display:none;">
 
-        <input type="email" id="email" placeholder="Email address">
+    <h2>Welcome to Lennotech</h2>
 
-        <button onclick="registerUser()">Create Account</button>
+    <input
+        type="text"
+        id="name"
+        placeholder="Your name"
+    >
 
-        <p id="message"></p>
+    <input
+        type="email"
+        id="email"
+        placeholder="Email address"
+    >
+
+    <button onclick="registerUser()">Create Account</button>
+
+    <p id="message"></p>
+
+</section>
+
+
+<!-- DASHBOARD -->
+<section id="dashboard" style="display:none;">
+
+    <div class="dashboard-header">
+        <div>
+            <h2>Welcome, <span id="userName"></span> 👋</h2>
+            <p>Here is your Lennotech account.</p>
+        </div>
+
+        <button onclick="logoutUser()">Logout</button>
+    </div>
+
+
+    <!-- BALANCE -->
+    <div class="balance-card">
+
+        <p>Available Balance</p>
+
+        <h1>
+            KSh <span id="balance">0</span>
+        </h1>
+
+        <button onclick="showWithdrawal()">
+            💸 Withdraw
+        </button>
+
+    </div>
+
+
+    <!-- DASHBOARD CARDS -->
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h3>📝 Available Surveys</h3>
+            <h2 id="surveyCount">0</h2>
+            <p>Surveys waiting for you</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>🎁 Rewards</h3>
+            <h2>KSh <span id="rewards">0</span></h2>
+            <p>Total rewards earned</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>📊 Completed</h3>
+            <h2 id="completedSurveys">0</h2>
+            <p>Surveys completed</p>
+        </div>
+
+    </div>
+
+
+    <!-- AVAILABLE SURVEYS -->
+    <section class="surveys-section">
+
+        <h2>Available Surveys</h2>
+
+        <div id="surveysList">
+
+            <div class="survey-card">
+
+                <div>
+                    <h3>📝 General Opinion Survey</h3>
+                    <p>Tell us what you think about everyday products.</p>
+                    <small>⏱ 5 minutes</small>
+                </div>
+
+                <div>
+                    <strong>KSh 20</strong>
+                    <br>
+                    <button onclick="completeSurvey(20)">
+                        Start Survey
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="survey-card">
+
+                <div>
+                    <h3>📱 Mobile Usage Survey</h3>
+                    <p>Answer simple questions about mobile phone usage.</p>
+                    <small>⏱ 3 minutes</small>
+                </div>
+
+                <div>
+                    <strong>KSh 15</strong>
+                    <br>
+                    <button onclick="completeSurvey(15)">
+                        Start Survey
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
-</main>
 
-<footer>
+
+    <!-- ACTIVITY -->
+    <section class="activity-section">
+
+        <h2>Recent Activity</h2>
+
+        <div id="activityList">
+            <p>No activity yet.</p>
+        </div>
+
+    </section>
+
+
+    <!-- WITHDRAWAL -->
+    <section id="withdrawal" class="withdrawal-section" style="display:none;">
+
+        <h2>📱 M-Pesa Withdrawal</h2>
+
+        <p>
+            Enter the M-Pesa number you want to use for your withdrawal.
+        </p>
+
+        <input
+            type="tel"
+            id="mpesaNumber"
+            placeholder="07XXXXXXXX"
+        >
+
+        <input
+            type="number"
+            id="withdrawAmount"
+            placeholder="Amount (KSh)"
+        >
+
+        <button onclick="requestWithdrawal()">
+            Request Withdrawal
+        </button>
+
+        <button onclick="hideWithdrawal()">
+            Cancel
+        </button>
+
+        <p id="withdrawMessage"></p>
+
+    </section>
+
+</section>
+
+</main><footer>
     <p>© 2026 Lennotech Agency</p>
-</footer>
-
-<script src="script.js"></script>
-
-</body>
+</footer><script src="script.js"></script></body>
 </html>
