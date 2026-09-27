@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lennotech Agency Surveys</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Lennotech Agency</h1>
+    <p>Survey Rewards</p>
+</header>
+
+<main>
+    <section class="hero">
+        <h2>Earn by Sharing Your Opinion</h2>
+        <p>Complete available surveys and earn rewards.</p>
+
+        <button onclick="showLogin()">Get Started</button>
+    </section>
+
+    <section class="features">
+        <div>
+            <h3>📋 Surveys</h3>
+            <p>Find surveys available to you.</p>
+        </div>
+
+        <div>
+            <h3>💰 Rewards</h3>
+            <p>Track your earnings as you complete surveys.</p>
+        </div>
+
+        <div>
+            <h3>📱 M-Pesa</h3>
+            <p>Request eligible withdrawals through M-Pesa.</p>
+        </div>
+    </section>
+
+    <section id="login" class="login-box" style="display:none;">
+        <h2>Welcome to Lennotech</h2>
+
+        <input type="text" id="name" placeholder="Your name">
+
+        <input type="email" id="email" placeholder="Email address">
+
+        <button onclick="registerUser()">Create Account</button>
+
+        <p id="message"></p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Lennotech Agency</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
