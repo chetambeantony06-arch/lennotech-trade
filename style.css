@@ -1,136 +1,353 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #1f2937;
+font-family: Arial, sans-serif;
+background: #f4f7fb;
+color: #1f2937;
+line-height: 1.5;
 }
 
 header {
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
+background: #111827;
+color: white;
+text-align: center;
+padding: 25px 15px;
 }
 
 header h1 {
-    font-size: 30px;
+font-size: 30px;
 }
 
 header p {
-    margin-top: 5px;
-    color: #9ca3af;
+margin-top: 5px;
+color: #9ca3af;
 }
 
 main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px 20px;
+max-width: 1050px;
+margin: auto;
+padding: 30px 20px;
 }
 
+/* HERO */
+
 .hero {
-    background: white;
-    text-align: center;
-    padding: 50px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+background: white;
+text-align: center;
+padding: 60px 20px;
+border-radius: 18px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 .hero h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
+font-size: 34px;
+margin-bottom: 15px;
 }
 
 .hero p {
-    margin-bottom: 25px;
-    color: #6b7280;
+margin-bottom: 25px;
+color: #6b7280;
 }
 
 button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 13px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
+background: #2563eb;
+color: white;
+border: none;
+padding: 13px 25px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 16px;
+transition: 0.2s;
 }
 
 button:hover {
-    background: #1d4ed8;
+background: #1d4ed8;
+transform: translateY(-1px);
 }
 
+/* FEATURES */
+
 .features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 25px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-top: 25px;
 }
 
 .features div {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+background: white;
+padding: 25px;
+border-radius: 14px;
+text-align: center;
+box-shadow: 0 3px 12px rgba(0,0,0,0.06);
 }
 
 .features h3 {
-    margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 .features p {
-    color: #6b7280;
+color: #6b7280;
 }
 
+/* LOGIN */
+
 .login-box {
-    background: white;
-    max-width: 450px;
-    margin: 30px auto;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+background: white;
+max-width: 450px;
+margin: 30px auto;
+padding: 30px;
+border-radius: 14px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 .login-box h2 {
-    margin-bottom: 20px;
-    text-align: center;
+margin-bottom: 20px;
+text-align: center;
 }
 
-.login-box input {
-    width: 100%;
-    padding: 13px;
-    margin-bottom: 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 7px;
+.login-box input,
+.withdrawal-section input {
+width: 100%;
+padding: 13px;
+margin-bottom: 12px;
+border: 1px solid #d1d5db;
+border-radius: 8px;
+font-size: 15px;
+outline: none;
+}
+
+.login-box input:focus,
+.withdrawal-section input:focus {
+border-color: #2563eb;
 }
 
 .login-box button {
-    width: 100%;
+width: 100%;
 }
 
 #message {
-    margin-top: 15px;
-    text-align: center;
+margin-top: 15px;
+text-align: center;
 }
+
+/* DASHBOARD */
+
+.dashboard-header {
+background: white;
+padding: 25px;
+border-radius: 15px;
+margin-bottom: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.dashboard-header h2 {
+margin-bottom: 5px;
+}
+
+.dashboard-header p {
+color: #6b7280;
+}
+
+/* BALANCE */
+
+.balance-card {
+background: #111827;
+color: white;
+padding: 30px;
+border-radius: 18px;
+margin-bottom: 25px;
+box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.balance-card p {
+color: #9ca3af;
+margin-bottom: 5px;
+}
+
+.balance-card h1 {
+font-size: 38px;
+margin-bottom: 20px;
+}
+
+.balance-card button {
+background: #2563eb;
+}
+
+/* DASHBOARD CARDS */
+
+.dashboard-cards {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-bottom: 30px;
+}
+
+.dashboard-card {
+background: white;
+padding: 25px;
+border-radius: 14px;
+box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.dashboard-card h3 {
+margin-bottom: 12px;
+font-size: 17px;
+}
+
+.dashboard-card h2 {
+font-size: 28px;
+margin-bottom: 5px;
+}
+
+.dashboard-card p {
+color: #6b7280;
+font-size: 14px;
+}
+
+/* SURVEYS */
+
+.surveys-section,
+.activity-section,
+.withdrawal-section {
+background: white;
+padding: 25px;
+border-radius: 15px;
+margin-bottom: 25px;
+box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.surveys-section h2,
+.activity-section h2,
+.withdrawal-section h2 {
+margin-bottom: 20px;
+}
+
+.survey-card {
+border: 1px solid #e5e7eb;
+border-radius: 12px;
+padding: 20px;
+margin-bottom: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+}
+
+.survey-card h3 {
+margin-bottom: 7px;
+}
+
+.survey-card p {
+color: #6b7280;
+margin-bottom: 7px;
+}
+
+.survey-card small {
+color: #9ca3af;
+}
+
+.survey-card strong {
+font-size: 20px;
+color: #16a34a;
+display: inline-block;
+margin-bottom: 8px;
+}
+
+/* ACTIVITY */
+
+.activity-item {
+padding: 15px 0;
+border-bottom: 1px solid #e5e7eb;
+}
+
+.activity-item:last-child {
+border-bottom: none;
+}
+
+.activity-item span {
+color: #16a34a;
+font-weight: bold;
+}
+
+.activity-item small {
+color: #9ca3af;
+}
+
+/* WITHDRAWAL */
+
+.withdrawal-section {
+max-width: 600px;
+}
+
+.withdrawal-section button {
+margin-right: 8px;
+margin-top: 5px;
+}
+
+#withdrawMessage {
+margin-top: 15px;
+font-weight: bold;
+}
+
+/* FOOTER */
 
 footer {
-    text-align: center;
-    padding: 25px;
-    margin-top: 30px;
-    color: #6b7280;
+text-align: center;
+padding: 25px;
+margin-top: 30px;
+color: #6b7280;
 }
 
-@media (max-width: 700px) {
-    .features {
-        grid-template-columns: 1fr;
-    }
+/* MOBILE */
 
-    .hero h2 {
-        font-size: 25px;
-    }
+@media (max-width: 700px) {
+
+main {
+    padding: 20px 12px;
+}
+
+.features {
+    grid-template-columns: 1fr;
+}
+
+.dashboard-cards {
+    grid-template-columns: 1fr;
+}
+
+.hero {
+    padding: 45px 18px;
+}
+
+.hero h2 {
+    font-size: 25px;
+}
+
+.dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.survey-card {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.survey-card button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.balance-card h1 {
+    font-size: 32px;
+}
+
 }
